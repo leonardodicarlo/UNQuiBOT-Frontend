@@ -141,7 +141,7 @@ body {
     margin-top: 10px;
     background: #c7baba;
     padding: 8px 12px;
-    max-width: 70%;
+    max-width: 150%;
 }
 
 .messages__item--visitor,
@@ -190,6 +190,22 @@ body {
 .chatbox__button button:visited {
     padding: 10px;
     background: white;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.login__button button,
+.login__button button:focus,
+.login__button button:visited {
+    position: absolute;
+    bottom: 0px;
+    right: 80px;
+    padding: 6px;
     border: none;
     outline: none;
     border-top-left-radius: 50px;
