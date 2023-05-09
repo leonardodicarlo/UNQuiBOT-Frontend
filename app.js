@@ -14,6 +14,8 @@ class Chatbox {
     display() {
         const {openButton, chatBox, sendButton, loginButton} = this.args;
 
+        document.cookie = "unquibot_token = 0"
+
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
@@ -41,6 +43,7 @@ class Chatbox {
 
     onSendButton(chatbox) {
         var textField = chatbox.querySelector('input');
+        var cookieLogin = document.cookie;
         let text1 = textField.value
         if (text1 === "") {
             return;
@@ -51,7 +54,7 @@ class Chatbox {
 
         fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
-            body: JSON.stringify({ message: text1 }),
+            body: JSON.stringify({ message: text1, login: cookieLogin }),
             mode: 'cors',
             headers: {
               'Content-Type': 'application/json'
@@ -90,6 +93,7 @@ class Chatbox {
 
     onLoginButton(chatBox) {
         window.open('https://acceso.uvq.edu.ar/', '_blank');
+        document.cookie = "unquibot_token=1"
     }
 }
 
