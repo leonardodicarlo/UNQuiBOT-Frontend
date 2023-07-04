@@ -12,3 +12,10 @@
 ### Configuración 🔧
 
 Esta versión está realizada sin un framework en particular pero se utilizaron JavaScript, CSS y HTML para configurar la vista.
+
+***
+
+### Links útiles 📄
+
+* [Video Demostración](https://youtu.be/T7heLFdTRuU)
+* [Tablero Trello](https://trello.com/b/zP1UjTij/unquibot)
